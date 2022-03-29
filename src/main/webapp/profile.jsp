@@ -1,16 +1,20 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: nelsondelpozo
-  Date: 3/29/22
-  Time: 11:07 AM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
 
-</body>
-</html>
+
+<%
+
+    String username = request.getParameter("uname");
+    String password = request.getParameter("psw");
+
+    if(username.equalsIgnoreCase("admin") && password.equals("password")){
+        out.println("login success");
+
+    }else {
+        out.println("login failed");
+
+    }
+%>
+
+
+
+
+
