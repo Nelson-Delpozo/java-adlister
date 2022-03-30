@@ -1,18 +1,16 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title><%= "profile" %></title>
+</head>
+<body>
 
+login successful. welcome to profile.jsp
 
-<%
+</body>
+</html>
 
-    String username = request.getParameter("uname");
-    String password = request.getParameter("psw");
-
-    if(username.equalsIgnoreCase("admin") && password.equals("password")){
-        out.println("login success");
-
-    }else {
-        out.println("login failed");
-
-    }
-%>
 
 
 
