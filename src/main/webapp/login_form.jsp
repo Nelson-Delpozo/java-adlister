@@ -30,6 +30,9 @@
                 <div class="card-body py-5 px-md-5">
 
                     <form name="login-form" action="login.jsp" method="post">
+                        <h2>Welcome!</h2>
+                        <h3>please log in below</h3>
+                        <br>
                         <div class="form-outline mb-4">
                             <input type="text" placeholder="Enter Username" name="uname" required class="form-control"/>
                         </div>
