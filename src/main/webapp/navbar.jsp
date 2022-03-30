@@ -1,4 +1,4 @@
 <nav class="text-white navbar navbar-light bg-dark p-2">
     <!-- Navbar content -->
-THIS IS MY NAVBAR
+    <a href="index.jsp" class="text-white">HOME</a>
 </nav>
