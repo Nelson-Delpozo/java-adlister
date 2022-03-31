@@ -5,8 +5,9 @@
 <body>
 <%@ include file="navbar.jsp" %>
 <br><br>
-<%@ include file="login_form.jsp" %>
+<h1>Welcome to the Ad-Lister</h1>
 <%@ include file="footer.jsp" %>
 <%@ include file="mdnscripts.jsp" %>
 </body>
 </html>
+
