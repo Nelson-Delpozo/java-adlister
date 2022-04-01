@@ -15,6 +15,6 @@ public class IncorrectGuessServlet extends HttpServlet {
 
         String result = (String)request.getAttribute("result");
         request.setAttribute("result", result);
-        request.getRequestDispatcher("/guess.jsp").forward(request, response);
+        request.getRequestDispatcher("/guess_results.jsp").forward(request, response);
     }
 }
