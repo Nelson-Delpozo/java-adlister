@@ -31,5 +31,11 @@ public class PizzaOrderServlet extends HttpServlet {
         request.setAttribute("toppings", Arrays.toString(toppings));
         request.setAttribute("address", address);
         request.getRequestDispatcher("/pizza-order.jsp").forward(request, response);
+
+        System.out.println(crust);
+        System.out.println(sauce);
+        System.out.println(size);
+        System.out.println(Arrays.toString(toppings));
+        System.out.println(address);
     }
 }
