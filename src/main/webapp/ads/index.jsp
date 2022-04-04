@@ -14,9 +14,9 @@
 <body>
 hello from ad-lister show ads page
 <br>
-<form method="post">
-    <input type="submit" value="See All Ads">
-</form>
+<%--<form method="post">--%>
+<%--    <input type="submit" value="See All Ads">--%>
+<%--</form>--%>
 
 <h1>Here are all the ads:</h1>
 
