@@ -1,5 +1,3 @@
-import java.io.Serializable;
-
 public class Quote {
 
     private long id;
@@ -31,4 +29,13 @@ public class Quote {
         public void setAuthor (String author){
             this.author = author;
         }
+
+
+    @Override
+    public String toString() {
+        return ("Author: "+ this.getAuthor()+
+                " Quote: "+ this.getContent());
+
+    }
+
     }
