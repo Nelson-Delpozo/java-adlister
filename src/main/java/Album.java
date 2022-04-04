@@ -39,9 +39,7 @@ public class Album implements Serializable {
         return releaseDate;
     }
 
-    public void setRelease_date(Date releaseDate) {
-        this.releaseDate = releaseDate;
-    }
+    public void setReleaseDate(Date releaseDate) {this.releaseDate = releaseDate;}
 
     public String getGenre() {
         return genre;
