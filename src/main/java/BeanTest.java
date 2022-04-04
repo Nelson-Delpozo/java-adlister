@@ -20,10 +20,12 @@ public class BeanTest {
         Quote newQuote = new Quote();
         newQuote.setAuthor("Ernest Hemingway");
         newQuote.setContent("Ask not for whom the bell tolls, it tolls for thee.");
+        newQuote.setId(1);
 
         Quote newQuote2 =  new Quote();
         newQuote2.setAuthor("W.C Fields");
-        newQuote2.setContent("He's not gonna tell me I don't love him");
+        newQuote2.setContent("He's not gonna tell me I don't love him!");
+        newQuote2.setId(2);
 
         System.out.println(newQuote.getAuthor());
         System.out.println(newQuote.getContent());

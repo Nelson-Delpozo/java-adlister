@@ -33,9 +33,9 @@ public class Quote {
 
     @Override
     public String toString() {
-        return ("Author: "+ this.getAuthor()+
-                " Quote: "+ this.getContent());
-
+        return ("Author: " + this.getAuthor()+
+                " Quote: " + this.getContent()+
+                " id: " + this.getId());
     }
 
     }
