@@ -5,10 +5,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "ViewProfileServlet", urlPatterns = "/profile")
-public class ViewProfileServlet extends HttpServlet {
+@WebServlet(name = "LogoutServlet", urlPatterns = "/logout")
+public class LogoutServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        request.getRequestDispatcher("WEB-INF/profile.jsp").forward(request, response);
+        request.getSession().setAttribute("isLoggedIn", false);
+        response.sendRedirect("/login");
+
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
     }
 }

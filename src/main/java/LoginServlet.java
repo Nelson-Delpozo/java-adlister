@@ -8,7 +8,11 @@ import java.io.IOException;
 @WebServlet(name = "LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("WEB-INF/login.jsp").forward(request, response);
+        if (request.getSession().getAttribute("isLoggedIn") == null || !((boolean) request.getSession().getAttribute("isLoggedIn"))) {
+            request.getRequestDispatcher("WEB-INF/login.jsp").forward(request, response);
+        }else{
+            response.sendRedirect("/profile");
+        }
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -17,6 +21,8 @@ public class LoginServlet extends HttpServlet {
         boolean validAttempt = username.equals("admin") && password.equals("password");
 
         if (validAttempt) {
+            request.getSession().setAttribute("user", username);
+            request.getSession().setAttribute("isLoggedIn", true);
             response.sendRedirect("/profile");
         } else {
             response.sendRedirect("/login");
