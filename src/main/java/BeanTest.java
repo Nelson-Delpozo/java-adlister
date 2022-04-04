@@ -41,8 +41,9 @@ public class BeanTest {
         quotesList.add(newQuote);
         quotesList.add(newQuote2);
 
-        for (Object quote : quotesList) {
+        for (Quote quote : quotesList) {
             System.out.println("quote = " + quote.toString());
+
         }
 
 
