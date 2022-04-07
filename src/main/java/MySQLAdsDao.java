@@ -60,8 +60,8 @@ public class MySQLAdsDao implements Ads {
 
     private String createInsertQuery(Ad ad) {
         return "INSERT INTO ads(user_id, title, description) VALUES "
-                + "(" + ad.getUserId() + ", "
-                + "'" + ad.getTitle()
+                + "(" + ad.getUserId() + ", " //(id,'title','description')
+                + "'" + ad.getTitle() + "',"
                 + "'" + ad.getDescription() + "')";
     }
 
