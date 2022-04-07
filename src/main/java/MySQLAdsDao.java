@@ -5,8 +5,8 @@ import java.sql.DriverManager;
 import com.mysql.cj.jdbc.Driver;
 
 public class MySQLAdsDao implements Ads {
-    private Connection connection;
-    private List<Ad> ads;
+    private final Connection connection;
+//    private List<Ad> ads;
 
     public MySQLAdsDao(Config config) throws SQLException {
         DriverManager.registerDriver(new Driver());
@@ -41,8 +41,8 @@ public class MySQLAdsDao implements Ads {
 
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
-                rs.getInt("id"),
-                rs.getInt("user_id"),
+                rs.getLong("id"),
+                rs.getLong("user_id"),
                 rs.getString("title"),
                 rs.getString("description")
         );
